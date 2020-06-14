@@ -1,0 +1,4 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_tomato_left" android:duration="400" />
+    <item android:drawable="@drawable/ic_tomato_right" android:duration="400" />
+</animation-list>
