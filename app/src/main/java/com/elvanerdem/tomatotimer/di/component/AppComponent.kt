@@ -1,7 +1,7 @@
 package com.elvanerdem.tomatotimer.di.component
 
 import com.elvanerdem.tomatotimer.TomatoTimerApp
-import com.elvanerdem.tomatotimer.di.builder.ActivityBuilder
+import com.elvanerdem.tomatotimer.di.module.ActivityBuilder
 import com.elvanerdem.tomatotimer.di.module.AppModule
 import com.elvanerdem.tomatotimer.di.module.ViewModelModule
 import dagger.BindsInstance

@@ -1,10 +1,10 @@
-package com.elvanerdem.tomatotimer.di.builder
+package com.elvanerdem.tomatotimer.di.module
 
 import com.elvanerdem.tomatotimer.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
-@Module
+@Module(includes = [FragmentBuilderModule::class])
 interface ActivityBuilder {
 
     @ContributesAndroidInjector
