@@ -16,36 +16,39 @@ import timber.log.Timber
 
 object AppInjector {
 
+    private val TAG = AppInjector::class.java.simpleName
+
     fun init(tomatoTimerApp: TomatoTimerApp) {
         DaggerAppComponent.builder().application(tomatoTimerApp).build().inject(tomatoTimerApp)
 
         tomatoTimerApp.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                Timber.d(TAG + " onActivityCreated")
                 handleActivity(activity)
             }
 
             override fun onActivityStarted(activity: Activity) {
-                // Nothing goes here
+                Timber.d(TAG + " onActivityStarted")
             }
 
             override fun onActivityResumed(activity: Activity) {
-                // Nothing goes here
+                Timber.d(TAG +" onActivityResumed")
             }
 
             override fun onActivityPaused(activity: Activity) {
-                // Nothing goes here
+                Timber.d(TAG +" onActivityPaused")
             }
 
             override fun onActivityStopped(activity: Activity) {
-                // Nothing goes here
+                Timber.d(TAG +" onActivityStopped")
             }
 
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle?) {
-                // Nothing goes here
+                Timber.d(TAG +" onActivitySaveInstanceState")
             }
 
             override fun onActivityDestroyed(activity: Activity) {
-                // Nothing goes here
+                Timber.d(TAG +" onActivityDestroyed")
             }
         })
     }
